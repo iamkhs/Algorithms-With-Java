@@ -1,4 +1,4 @@
-package searching_algorithms.lenear_search;
+package searching_algorithms.linear_search;
 
 public class SearchInRange {
     public static void main(String[] args){
