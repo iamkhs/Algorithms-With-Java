@@ -4,7 +4,7 @@ public class Binary_Search {
     public static void main(String[] args){
         int[] nums = {12, 22, 34, 38, 45, 73, 81, 93};
         int target = 73;
-        int ans = search(nums, target, 0, nums.length-1);
+        int ans = binarySearch(nums, target);
         System.out.println(ans);
     }
     /*
@@ -34,24 +34,5 @@ public class Binary_Search {
             }
         }
         return -1;
-    }
-
-    // Binary Search using Recursion
-    private static int search(int[] nums, int target, int start, int end){
-        if (start > end){
-            return -1;
-        }
-
-        int mid = start + (end - start) / 2;
-
-        if (target == nums[mid]){
-            return mid;
-        }
-
-        if (target > nums[mid]){
-            return search(nums, target, mid + 1, end);
-        }
-
-        return search(nums, target, start, nums.length - 1);
     }
 }
